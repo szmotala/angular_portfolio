@@ -42,13 +42,14 @@ canvas {
   @media screen and (max-width: $md-max) {
     font-size: 3.2rem;
     line-height: 4rem;
-    text-align: center;
   }
+  
   @media screen and (max-width: $sm-max) {
     font-size: 2.4rem;
     line-height: 3.2rem;
     
   }
+
 }
 
 .section-subtitle {
@@ -59,7 +60,6 @@ canvas {
   @media screen and (max-width: $md-max) {
     font-size: 1.6rem;
     line-height: 2.4rem;
-    text-align: center;
   }
 }
 
@@ -96,27 +96,30 @@ canvas {
 }
 
 .cta-button {
-  padding: 1.2rem 2.4rem;
-  border: $main-color solid 0.2rem;
-  width: max-content;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ;
-
   a {
     color: #FFF;
     font-weight: 500;
     font-size: 1.6rem;
     display: block;
-  }
 
-  &:hover {
-    box-shadow: 0 0 3rem #7ac0c3;
-    background-color: $main-color;
-    
-    a {
+    padding: 1.2rem 2.4rem;
+    border: $main-color solid 0.2rem;
+    width: max-content;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ;
+
+    &:hover {
+      box-shadow: 0 0 3rem #7ac0c3;
+      background-color: $main-color;
       color: #000;
       text-shadow: 0 0 2rem rgba($color: #FFF, $alpha: 1);
     }
   }
+
+  @media screen and (max-width: $sm-max) {
+    display: grid;
+    justify-content: center;
+  }
+
 }

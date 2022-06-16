@@ -14,13 +14,11 @@
     @media screen and (max-width: $lg-max){
       padding: 4rem 6rem;
     }
-
-    @media screen and (max-width: $md-max){
-
-    }
-
+    
     @media screen and (max-width: $sm-max){
-
+      background: rgba($color: #000, $alpha: 0.3);
+      border-right: none;
+      padding: 4vh 6vw;
     }
   }
 }
@@ -31,12 +29,29 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 3.2rem;
+  
+  @media screen and (max-width: $md-max) {
+    height: 100%;
+  }
 
-  position: relative;
   .project-big {
     font-size: 6.4rem;
     font-weight: 600;
     text-transform: uppercase;
     color: rgba($color: $secondary, $alpha: 0.2);
+
+    @media screen and (max-width: $lg-max){
+      font-size: 5.6rem;
+    }
+
+    @media screen and (max-width: $md-max) {
+      color: rgba($color: $secondary, $alpha: 0.8);
+      font-size: 4.2rem;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $xs-max) { 
+        font-size: 2.4rem;
+    }
   }
 }
