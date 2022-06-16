@@ -1,16 +1,20 @@
 @import '../../../assets/styles/variables';
 
 .about {
-  // height: 80vh;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   padding: 4rem 0;
   margin-bottom: 10rem;
 
+  @media screen and (max-width: $md-max) {
+    padding: 0;
+  }
+
   &__main {
     display: flex;
-    justify-content: space-between;
+
+    @media screen and (max-width: $md-max) {
+      flex-direction: column-reverse;
+      align-items: center;;
+    }
   }
 
   &__content {
@@ -22,19 +26,24 @@
     &--title {
       margin-bottom: 2rem;
       width: max-content;
-      
-      .section-title {
-      }
-      
     }
-    // &--paragraph {
-    //   margin-bottom: 2.4rem;
-    // }
+
+    &--paragraph {
+      margin-bottom: 2.4rem;
+    }
+
+    @media screen and (max-width: $md-max) {
+      width: 100%;
+    }
   }
 
   &__image {
     width: 50%;
     height: auto;
+
+    @media screen and (max-width: $md-max) {
+      width: 100%;
+    }
 
     img {
       display: block;
