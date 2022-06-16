@@ -3,6 +3,10 @@
 .footer {
   &__social-media {
     margin-top: 10rem;
+
+    @media screen and (max-width: $md-max) {
+      margin-top: 5rem;
+    }
     
     &--list {
       display: flex;
@@ -10,7 +14,13 @@
       align-items: center;
       height: 10rem;
       list-style: none;
+
+      @media screen and (max-width: $sm-max) {
+        height: 6rem;
+        justify-content: space-around;
+      }
     }
+
 
     &--item {
       height: 100%;
@@ -40,6 +50,13 @@
         font-size: 2rem;
         text-transform: uppercase;
         text-decoration: none;
+      }
+
+      @media screen and (max-width: $sm-max) {
+        width: 25%;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
       }
     }
   }
