@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+@import './assets/styles/variables';
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', 'Exo', 'Segoe UI', Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 10px;
+
+  position: relative;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($color: $main-color, $alpha: 0.2) ; 
+
+    &:hover {
+      background: #1d4e4f; 
+    }
+  }
+}
+
+canvas {
+  width: 100% !important;
+}
+
+.section-title {
+  font-size: 4.4rem;
+  line-height: 5.2rem;
+  color: #FFF;
+}
+
+.section-subtitle {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: $secondary;
+}
+
+.section-text {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: #FFF;
+  font-family: 'Exo', 'Segoe UI', Tahoma, sans-serif;
+  text-align: justify;
+}
+
+.container {
+  max-width: $xl-max;
+  margin: 0 auto;
+  
+  @media screen and (max-width: $xl-max) {
+    max-width: $lg-max;
+  }
+  @media screen and (max-width: $lg-max) {
+    max-width: $md-max;
+  }
+  @media screen and (max-width: $md-max) {
+    max-width: $sm-max;
+  }
+  @media screen and (max-width: $sm-max) {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+
+.cta-button {
+  padding: 1.2rem 2.4rem;
+  border: $main-color solid 0.2rem;
+  width: max-content;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ;
+
+  a {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  &:hover {
+    box-shadow: 0 0 3rem #7ac0c3;
+    background-color: $main-color;
+    
+    a {
+      color: #000;
+      text-shadow: 0 0 2rem rgba($color: #FFF, $alpha: 1);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../assets/styles/variables';
+
+.home-page{
+  &__content{
+    padding: 6rem 10rem;
+    background: rgba($color: #000, $alpha: 0.5);
+    border-top: 0.1rem solid rgba($color: #fff, $alpha: 0.1);
+    border-right: 0.1rem solid rgba($color: #fff, $alpha: 0.1);
+    box-shadow: 0rem 0 10rem rgba($color: #FFF, $alpha: 0.05);
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  position: relative;
+  .project-big {
+    // position: absolute;
+    // top: -15rem;
+    // right: 0;
+    font-size: 6.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba($color: $secondary, $alpha: 0.2);
+  }
+}

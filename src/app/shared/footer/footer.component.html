@@ -1,0 +1,22 @@
+<footer>
+  <div class="footer-container">
+    <div class="container">
+
+      <div class="footer__social-media">
+        <ul class="footer__social-media--list">
+          <ng-container *ngFor="let item of social_items">
+            <li class="footer__social-media--item" title="{{ item.alt }}">
+              <a href="{{ item.url }}" target="_blank" rel="noreferrer noopener">
+                <svg-icon [iconName]="item.icon"></svg-icon>
+              </a>
+            </li>
+          </ng-container>
+          <li class="footer__social-media--item" title="Send me a message">
+            <a href="mailto:szymon.motala95@gmail.com">mail</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyrights">Copyright © 2022 Szymon Motała</div>
+    </div>
+  </div>
+</footer>

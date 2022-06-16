@@ -1,0 +1,10 @@
+.svg-container {
+  width: 6rem;
+  height: 6rem;
+  display: block;
+  
+  svg {
+    width: inherit !important;
+    height: inherit !important;
+  }
+}
