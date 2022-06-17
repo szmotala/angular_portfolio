@@ -2,11 +2,11 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import * as THREE from 'three';
 
 @Component({
-  selector: 'app-anim',
-  templateUrl: './anim.component.html',
-  styleUrls: ['./anim.component.scss']
+  selector: 'animated-background',
+  templateUrl: './animated-background.component.html',
+  styleUrls: ['./animated-background.component.scss']
 })
-export class AnimComponent implements OnInit, AfterViewInit {
+export class AnimatedBackgroundComponent implements OnInit, AfterViewInit {
 
   @ViewChild('anim_container') container: ElementRef | any;
 

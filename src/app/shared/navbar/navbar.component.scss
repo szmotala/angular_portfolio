@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables';
+
 .navbar-top {
   width: 100vw;
   position: fixed;
@@ -10,44 +12,138 @@
   
 
   .menu {
-    height: 4rem;
-    width: 4rem;
-    position: relative;
-    border-radius: 1rem;
-    border: 0.1rem solid #249798;
-
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    z-index: 101;
+    cursor: pointer;
 
     &__button {
       width: 3rem;
-      height: 0.2rem;
+      height: 0.3rem;
       background: #249798;
       position: absolute;
       top: 50%;
-      left: 0.5rem;
+      right: 0.5rem;
       transform: translateY(-50%);
-      border-radius: 0.6rem;
+      transition: transform 0.3s, width 0.3s, background-color 0.2s;
 
       &::after {
         content: '';
         position: absolute;
-        width: 100%;
-        height: 0.2rem;
-        background: #249798;
+        right: 0;
+        width: 4rem;
+        height: 0.3rem;
+        background: inherit;
         z-index: 2;
-        transform: translateY(-0.8rem);
-        border-radius: 1rem;
+        transform: translateY(-1.1rem);
+        transition: transform 0.3s, width 0.3s;
       }
 
       &::before {
         content: '';
         position: absolute;
-        width: 100%;
-        height: 0.2rem;
-        background: #249798;
+        right: 0;
+        width: 2rem;
+        height: 0.3rem;
+        background: inherit;
         z-index: 2;
-        transform: translateY(0.8rem);
-        border-radius: 1rem;
+        transform: translateY(1.1rem);
+        transition: width 0.3s;
       }
+    }
+
+    &:hover {
+      .menu__button {
+        background: #7ac0c3;
+      }
+    }
+
+    &.active {
+      .menu__button {
+        transform: rotate(45deg);
+        width: 2.5rem;
+        background-color: #a93a1e;
+        
+        &::after {
+          width: 2.5rem;
+          transform: translateY(0) rotate(-90deg);;
+          background-color: #a93a1e;
+        }
+        
+        &::before {
+          width: 0;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  width: 0;
+  height: auto;
+  position: absolute;
+  background-color: transparent;
+  right: 1.5rem;
+  top: 1.5rem;
+  z-index: 99;
+  overflow: hidden;
+  transition: width 0.3s ease-in, height 0.3s ease-in, background-color 0.3s ease-in- out;
+  box-shadow: 0 0 10rem rgba($color: $main-color, $alpha: 0.2);
+  
+  &.active {
+    width: 35rem;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    
+  }
+
+  @media screen and (max-width: $sm-max) {
+    width: 1.2rem;
+    
+    &.active {
+      width: calc(100% - 3rem);
+    }
+  }
+}
+
+.navigation-list {
+  padding: 2rem;
+  list-style: none;
+
+  &__item {
+    color: #fff;
+    font-size: 2.4rem;
+    width: max-content;
+    white-space: nowrap;
+
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &.router-active {
+        color: $main-color;
+        font-weight: 500;
+      }
+    }
+
+    span {
+      display: block;
+      color: $secondary;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+
+    @media screen and (max-width: $md-max) {
+      font-size: 2rem;
     }
   }
 }

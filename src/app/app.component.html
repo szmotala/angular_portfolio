@@ -1,6 +1,7 @@
-<app-anim></app-anim>
+<animated-background></animated-background>
 <div class="page-container">
   <app-navbar></app-navbar>
-  <home-page></home-page>
-  <app-footer></app-footer>
+  <div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 </div>

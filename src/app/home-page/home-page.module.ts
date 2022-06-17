@@ -5,6 +5,10 @@ import { HomePageComponent } from './home-page.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectOverviewComponent } from './project-overview/project-overview.component';
 import { HomeContentComponent } from './home-content/home-content.component';
+import { FooterComponent } from '../shared/footer/footer.component';
+import { SvgIconComponent } from '../shared/svg-icon/svg-icon.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -12,6 +16,8 @@ import { HomeContentComponent } from './home-content/home-content.component';
   declarations: [ HeroComponent, HomeContentComponent, HomePageComponent, AboutComponent, ProjectOverviewComponent],
   imports: [
     CommonModule,
+    AppRoutingModule,
+    SharedModule
   ],
   exports: [HomePageComponent]
 })

@@ -11,6 +11,7 @@ export class ProjectOverviewComponent implements OnInit {
   @Input() text?: string = '';
   @Input() technologies?: Array<string> = [];
   @Input() mainImgUrl?: string = '';
+  @Input() id: string = '';
 
   constructor() { }
 

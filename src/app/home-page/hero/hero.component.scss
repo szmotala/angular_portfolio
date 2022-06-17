@@ -18,12 +18,14 @@
       letter-spacing: 0.4rem;
       margin-bottom: 3.2rem;
       color: $main-color;
+      user-select: none;
     }
-
+    
     &__role {
       font-size: 3.6rem;
       letter-spacing: 0.2rem;
       color: $secondary;
+      user-select: none;
     }
 
     @media screen and (max-width: $lg-max) {

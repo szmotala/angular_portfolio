@@ -1,8 +1,33 @@
 <div class="navbar-top">
-  <div class="menu">
+  <div class="menu" (click)="activateNavbar()" [ngClass]="{'active': activated}">
     <div class="menu__button"></div>
   </div>
-  <nav>
-  
+
+  <nav class="navigarion" [ngClass]="{'active': activated}" >
+    <ul class="navigation-list">
+      <li class="navigation-list__item" (click)="activateNavbar()">
+        <a [routerLink]="'/'" [routerLinkActive]="['router-active']" [routerLinkActiveOptions]="{exact:
+          true}">Home</a>
+      </li>
+      <li class="navigation-list__item" (click)="activateNavbar()">
+        <a [routerLink]="'/about'" [routerLinkActive]="['router-active']">About</a>
+      </li>
+      <li class="navigation-list__item" (click)="activateNavbar()">
+        <a href="#project-blog">
+          <span>Project</span>Blog app
+        </a>
+      </li>
+      <li class="navigation-list__item" (click)="activateNavbar()">
+        <a href="#project-photo">
+          <span>Project</span>Photography portfolio
+        </a>
+      </li>
+      <li class="navigation-list__item" (click)="activateNavbar()">
+        <a [routerLink]="'/contact'" [routerLinkActive]="['router-active']">
+          Contact
+        </a>
+      </li>
+    </ul>
   </nav>
+
 </div>

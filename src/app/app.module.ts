@@ -4,24 +4,27 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { AnimComponent } from './anim/anim.component';
+import { AnimatedBackgroundComponent } from './animated-background/animated-background.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomePageModule } from './home-page/home-page.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ContactPageModule } from './contact-page/contact-page.module';
 import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AnimComponent,
-    FooterComponent,
-    SvgIconComponent,
+    AnimatedBackgroundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomePageModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ContactPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
