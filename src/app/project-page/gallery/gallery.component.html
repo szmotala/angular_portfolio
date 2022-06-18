@@ -1,0 +1,12 @@
+<div class="gallery">
+  <div class="gallery__main">
+    <img [src]="elements[0].url" [alt]="elements[0].alt" id="galleryMain">
+  </div>
+  <div class="gallery__images">
+    <ul class="gallery__images--list">
+      <li *ngFor="let image of elements; let i = index">
+        <img [src]="image.url" [alt]="image.alt" GalleryElement [class]="{ 'active' : i == 0 }">
+      </li>
+    </ul>
+  </div>
+</div>

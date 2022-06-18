@@ -19,6 +19,7 @@
       margin-bottom: 3.2rem;
       color: $main-color;
       user-select: none;
+      text-align: right;
     }
     
     &__role {
@@ -26,6 +27,7 @@
       letter-spacing: 0.2rem;
       color: $secondary;
       user-select: none;
+      text-align: right;
     }
 
     @media screen and (max-width: $lg-max) {
@@ -51,16 +53,24 @@
       }
     }
 
-    @media screen and (max-width: $xs-max) { 
+    @media screen and (max-width: $sm-max) { 
       &__name {
-        font-size: 2.4rem;
-        margin-bottom: 2rem;
         text-align: center;
       }
   
       &__role {
-        font-size: 1.6rem;
         text-align: center;
+      }
+    }
+
+    @media screen and (max-width: $xs-max) { 
+      &__name {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+      }
+  
+      &__role {
+        font-size: 1.6rem;
       }
     }
   }

@@ -10,20 +10,20 @@
           true}">Home</a>
       </li>
       <li class="navigation-list__item" (click)="activateNavbar()">
-        <a [routerLink]="'/about'" [routerLinkActive]="['router-active']">About</a>
+        <a [routerLink]="'about'" [routerLinkActive]="['router-active']">About</a>
       </li>
       <li class="navigation-list__item" (click)="activateNavbar()">
-        <a href="#project-blog">
+        <a [routerLink]="'blog_app'" [routerLinkActive]="['router-active']">
           <span>Project</span>Blog app
         </a>
       </li>
       <li class="navigation-list__item" (click)="activateNavbar()">
-        <a href="#project-photo">
+        <a [routerLink]="'photography_portfolio'" [routerLinkActive]="['router-active']">
           <span>Project</span>Photography portfolio
         </a>
       </li>
       <li class="navigation-list__item" (click)="activateNavbar()">
-        <a [routerLink]="'/contact'" [routerLinkActive]="['router-active']">
+        <a [routerLink]="'contact'" [routerLinkActive]="['router-active']">
           Contact
         </a>
       </li>
