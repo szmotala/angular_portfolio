@@ -1,4 +1,31 @@
-<p>about-page works!</p>
-<div class="aboutpage">
-  <h1>test</h1>
-</div>
+<header class="about-page__hero container">
+    <div class="about-page__hero--title">
+      <h1 class="title">About me</h1>
+      <p class="subtitle">Get to know me</p>
+    </div>
+    <div class="about-page__hero--img">
+      <img src="/assets/person.png" alt="Picture of Szymon Motała">
+    </div>
+</header>
+
+
+<main class="about-page__main container">
+  <section class="about-page__intro">
+    <text-block [title]="'Who am I?'" [text]="'I was born in Poznań in 1995 and with my creative and fast learning abilities, I have transferred my knowledge from being a physicist towards the path of a frontend developer. I have worked on numerous research and development projects associated with both academic and commercial sectors, however I have always felt my place was elsewhere. In my youth, I have paid a lot of attention to art, a sense of aesthetics, and the basics of design. Currently, I have decided to use my previous experience and start of a new path of development. In 2021, I started postgraduate studies in web development in order to combine all this knowledge.'" [subtitle]="'Few words about'"></text-block>
+  </section>
+
+  <section class="about-page__passions">
+    <text-block [title]="'Passions'" [text]="'Although I take pleasure in the art of programming and I am specifically interested in the spectrum of frontend development, my new found passion is travelling to various places in a Cabriolet. In the last year, I have covered over five thousand kilometres in total for all the trips taken. Croatia, Switzerland and France were the main destinations of these journeys. In my spare time, I enjoy playing tennis (or rather trying to play) and I am a big fan of superheroes movies.'" [subtitle]="'Not only programming'"></text-block>
+  </section>
+
+  <section class="about-page__skills">
+      <h3 class="section-title skills-heading">Skills</h3>
+      <ul class="skills-list">
+        <li class="single-skill" *ngFor="let skill of skills">
+          <svg-icon [iconName]="skill.name"></svg-icon>
+          <p>{{ skill.title }}</p>
+        </li>
+      </ul>
+  </section>
+</main>
+<app-footer></app-footer>

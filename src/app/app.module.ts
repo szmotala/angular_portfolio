@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ContactPageModule } from './contact-page/contact-page.module';
 import { SvgIconComponent } from './shared/svg-icon/svg-icon.component';
 import { SharedModule } from './shared/shared.module';
+import { AboutPageModule } from './about-page/about-page.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     BrowserAnimationsModule,
     ContactPageModule,
+    AboutPageModule
   ],
   providers: [],
   bootstrap: [AppComponent],

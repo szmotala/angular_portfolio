@@ -82,7 +82,7 @@
 }
 
 nav {
-  width: 0;
+  width: 1.2rem;
   height: auto;
   position: absolute;
   background-color: transparent;
@@ -90,7 +90,7 @@ nav {
   top: 1.5rem;
   z-index: 99;
   overflow: hidden;
-  transition: width 0.3s ease-in, height 0.3s ease-in, background-color 0.3s ease-in- out;
+  transition: width 0.3s ease-in, height 0.3s ease-in, background-color 0.3s ease-in-out;
   box-shadow: 0 0 10rem rgba($color: $main-color, $alpha: 0.2);
   
   &.active {
@@ -101,9 +101,12 @@ nav {
 
   @media screen and (max-width: $sm-max) {
     width: 1.2rem;
-    
+    height: auto;
+    background-color: transparent;
+
     &.active {
       width: calc(100% - 3rem);
+      background-color: rgba($color: #000000, $alpha: 0.9);
     }
   }
 }

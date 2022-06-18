@@ -16,8 +16,9 @@
     }
     
     @media screen and (max-width: $sm-max){
-      background: rgba($color: #000, $alpha: 0.3);
-      border-right: none;
+      background: none;
+      border: none;
+      box-shadow: none;
       padding: 4vh 6vw;
     }
   }

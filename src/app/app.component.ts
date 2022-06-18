@@ -38,4 +38,12 @@ export class AppComponent {
   prepareRoute(outlet: RouterOutlet) {
     return outlet.activatedRouteData['page'];
   }
+
+  onRouterActivate() {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+  }
 }

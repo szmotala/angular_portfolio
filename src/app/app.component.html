@@ -2,6 +2,6 @@
 <div class="page-container">
   <app-navbar></app-navbar>
   <div [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
+    <router-outlet #outlet="outlet" (activate)="onRouterActivate()"></router-outlet>
   </div>
 </div>

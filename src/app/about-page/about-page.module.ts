@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutPageComponent } from './about-page.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -9,7 +10,11 @@ import { AboutPageComponent } from './about-page.component';
     AboutPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+  ],
+  exports: [
+    AboutPageComponent
   ]
 })
 export class AboutPageModule { }
