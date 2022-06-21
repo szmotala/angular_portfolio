@@ -4,7 +4,7 @@
   width: 100vw;
   position: fixed;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   top: 0;
   right: -100%;
   z-index: 100;
@@ -146,6 +146,12 @@ nav {
 
     @media screen and (max-width: $md-max) {
       font-size: 2rem;
+      width: 90%;
+      
+      a {
+        display: block;
+        width: 100%;
+      }
     }
   }
 }
